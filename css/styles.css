@@ -380,7 +380,10 @@ transition: transform 300ms ease-in-out 200ms, opasity 300ms ease-in-out 200ms;
   background-color: #FFFFFF;
 }
 
-
+.modal-form {
+  display: flex; 
+  flex-direction: column;
+}
 
 
   /** Наші переваги **/
@@ -926,7 +929,7 @@ color: #FFFFFF;
 
 .ftr-box-link {
   display: flex;
-  flex-direction: column;
+  flx-direction: column;
   justify-content: space-evenly
 }
 
@@ -964,8 +967,91 @@ color: #FFFFFF;
 }
 
 
-  /* Portfolio.html */
+/* Форма реєстрації в футері */
 
+
+.subscride {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0%;
+    margin-left: 90px;
+    margin-top: 10px;
+
+
+}
+.ftr-form {
+  display: flex;
+  flex-direction: row;
+}
+.join-tittle {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+margin-top: 0%;
+margin-bottom: 20;
+color: #FFFFFF;
+}
+
+.join-email {
+  Width: 358px;
+  Height: 50px;
+  background-color: inherit;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  
+
+}
+.join-btn {
+    display: flex;
+    justify-content: space-evenly; 
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: #ffffff;
+    background: var(--accent);
+
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+
+    cursor: pointer;
+    transition: var(--fast-anim);
+    transition-property: background-color var(--fast-anim);
+
+  }
+
+  .join-icon {
+
+    fill: currentColor;
+
+  }
+    .join-btn >.join-icon:hover {
+      fill: var(--accent);
+    }
+    
+    .join-btn >.join-icon:focus {
+      fill: var(--accent);
+    }
+
+
+  .join-btn:hover,
+  .join-btn:focus {
+    color: var(--accent);
+    background-color: #FFFFFF;
+  }
+
+
+  /* Portfolio.html */
 
   .btn-section {
       padding-top: 94px;

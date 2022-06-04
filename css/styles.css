@@ -332,7 +332,6 @@ transition: opacity var(--fast-anim), visibility var(--fast-anim);
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 581px;
   background-color: #FFFFFF;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
@@ -386,10 +385,17 @@ transition: transform 300ms ease-in-out 200ms, opasity 300ms ease-in-out 200ms;
 }
 
 .modal-hero-tittle {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+line-height: 23px;
+letter-spacing: 0.03em;
+
+
   display: block;
   margin-bottom: 20px;
   margin-top: 45px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.15;
   text-align: center;
   color: var(--color-main-text);
@@ -408,8 +414,15 @@ transition: transform 300ms ease-in-out 200ms, opasity 300ms ease-in-out 200ms;
   letter-spacing: 0.01em;
   
   color: #757575;
-}  
+} 
 
+
+.form-group {
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
 .modal-list {
   display: flex;
   flex-direction: column;
@@ -419,38 +432,102 @@ transition: transform 300ms ease-in-out 200ms, opasity 300ms ease-in-out 200ms;
 }
 
 .modal-input {
-
-  height: 40px;
   width: 448px;
-  left: 576px;
-  top: 382px;
+  padding-left: 35px;
   margin-bottom: 15px;
   margin-top: 2px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   background: #FFFFFF;
   border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
+outline: inherit;
 
+transition: border 400ms ease;
 
 }
 
-.modal-item:hover
-.modal-item:focus {
-    color: var(--accent);
+.modal-input:focus {
+
+  border: 1px solid var(--accent);
+
+}
+
+
+.user-icon {
+  position: absolute ;
+  fill: currentColor;
+  top: 5px;
+}
+
+.modal-input:focus-within + .form-icon .user-icon {
+  fill: var(--accent);
   }
 
 
 .comment {
   width: 448px;
 height: 120px;
+padding-left: 15px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
+resize: none;
 }
 
+.checkbox-container {
+display: flex;
+justify-content: center;
+height: 24px;
+margin-left: 15px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    line-height: 1.71;
+}
 .checkbox {
-margin-left: 20px;
-margin-right: 20px;
-
+  position: absolute;
+    width: 1px; 
+    height: 1px; 
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
+
+.checkbox:checked + .custom-checkbox .custom-checkbox-icon {
+  opacity: 1;
+}
+
+.checkbox:checked + .custom-checkbox {
+  background-color: var(--accent);
+  fill: #ffffff;
+}
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  color: #FFFFFF;
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+
+  transition: background-color 200ms ease-in;
+}
+
+.custom-checkbox-icon {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+.form-policy-group {
+  display: flex;
+  align-items: center;
+}
+
+
 .conditions {
 
 width: 400px;
@@ -470,9 +547,50 @@ color: #757575;
 
 }
 
+.contract {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/** .form-wrapper .form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(20px);
+}
+
+.modal-input:focus+.form-label {
+  transform: translateY(20px);
+}
+**/
+
+.form-icon {
+  position: absolute;
+  display: flex;
+  top: 70%;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+
+}
+
+.user-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.form-icon:focus {
+  opacity: 1;
+}
+
+
 
 .submit {
   display: inline-block;
+  
   text-align: center;
   font-size: 16px;
   font-style: normal;
@@ -487,7 +605,6 @@ color: #757575;
   border: none;
   border-radius: 4px;
   align-items: center;
-
   cursor: pointer;
   transition: var(--fast-anim);
   transition-property: background-color var(--fast-anim);
@@ -496,6 +613,7 @@ color: #757575;
 
   margin-left: 165px;
   margin-right: 165px;
+  margin-bottom: 35px;
 
 }
 
@@ -1120,12 +1238,20 @@ color: #FFFFFF;
   Width: 358px;
   Height: 50px;
   background-color: inherit;
+  color: #FFFFFF;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  
+  outline: transparent;
 
+  transition: border 400ms ease;
 }
+
+.join-email:focus {
+  border: 2px solid var(--accent);
+}
+
+
 .join-btn {
     display: flex;
     justify-content: space-evenly; 

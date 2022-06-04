@@ -55,47 +55,70 @@
         <div class="container">
         <h1 class="title">Ефективні рішення <br /> для вашого бізнесу</h1>
         <button type="button" class="btn" data-modal-open >Замовити послугу</button>
-         <div class="backdrop is-hidden"data-modal >
+         <div class="backdrop is-hidden" data-modal >
          <div class="modal-wrapper">
          <button class="modal-btn" data-modal-close>
            <svg class="btn-icon" wight="18" height="18"> 
              <use href="./images/sprite.svg#Close-back"></use>
            </svg>
          </button>
-         <form class="modal-form" name="modal-form">
+         
+         <form class="modal-form" name="modal-form" autocomplete="off" novalidate action="./js/method.js" method="post">
            <h3 class="modal-hero-tittle">
              <b> Залиште свої особисті дані, ми вам перетелефонуємо</b>
            </h3>
+           <div class="form-wrapper"> 
            <ul class="modal-list">
-           <li class="modal-item"> <label class="form-group">
+           <li class="modal-item"> <label class="form-group" for="user-name">
              <span class="form-label">Ім'я</span>
              <input class="modal-input" type="text" name="user-name" id="user-name">
+             <span class="form-icon">
+              <svg class="user-icon" wight="12" height="12"> 
+                <use href="./images/sprite.svg#icon-Human"></use>
+              </svg>
+             </span>
            </label> </li>
-           <li class="modal-item"> <label class="form-group">
+           <li class="modal-item"> <label class="form-group" for="user-phone">
             <span class="form-label">Телефон</span>
             <input class="modal-input" type="tel" name="user-phone" id="user-phone">
+            <span class="form-icon">
+              <svg class="user-icon" wight="12" height="12"> 
+                <use href="./images/sprite.svg#icon-tel"></use>
+              </svg>
+             </span>
           </label> </li>
-          <li class="modal-item"> <label class="form-group">
+          <li class="modal-item"> <label class="form-group" for="user-email">
             <span class="form-label">Пошта</span>
             <input class="modal-input" type="email" name="user-email" id="user-email">
+            <span class="form-icon">
+              <svg class="user-icon" wight="12" height="12"> 
+                <use href="./images/sprite.svg#icon-mail-black"></use>
+              </svg>
+             </span>
           </label> </li>
           <li class="modal-item"> <label class="form-group">
             <span class="form-label">Коментар</span>
             <textarea class="comment modal-input" name="comment" id="comment" placeholder="Введіть текст"></textarea>
           </label> </li>
-          <div class="checkbox">
-          <li class="modal-item"> <label> 
-            <input  type="checkbox" name="checkbox" id="checkbox" checked> 
-            <span class="conditions">Погоджуюсь із розсилкою і приймаю <a href="">Умови договору</a></span>
-          </label> </li>
            </ul>
+           </div>
+           <div class="checkbox-container">
+            <label class="form-policy-group"> 
+              <input class="checkbox" type="checkbox" name="checkbox" id="checkbox"> 
+              <span class="custom-checkbox">
+                <svg class="custom-checkbox-icon" wight="18" height="18"> 
+                  <use href="./images/sprite.svg#icon-chek">
+                  </use>
+                </svg>
+              </span>
+              <span class="conditions">Погоджуюсь із розсилкою і приймаю <a class="contract" href="#">Умови договору</a></span>
+            </label> 
+           </div>
           <button class="submit" type="submit">Відправити</button>
          </form>
         </div>
       </div>
-         </div>
-        </div>
-        </div>
+    </div>
       </section>
 
       <section class="advantages">
@@ -557,7 +580,7 @@
     </div>
     
 <div class="subscride"> 
-      <form class="join-form" name="join-form">
+      <form class="join-form" name="join-form" action="./js/method.js" method="post">
         <h3  class="join-tittle">
           <b>Підпишіться на розсилку</b>
         </h3>
